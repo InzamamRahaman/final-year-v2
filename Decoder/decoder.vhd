@@ -146,7 +146,7 @@ begin
 						counter <= 8;
 					else
 					   bit_out <= '0';
-						sending_bit_out <= '0';
+						sending_bit_out <= '1';
 						dispatch_state <= CHECK_NEXT_BIT;
 					end if;
 					need_more_data_out <= '1';

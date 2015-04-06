@@ -166,16 +166,13 @@ LAB12:    xsi_set_current_line(113, ng0);
 
 LAB11:    goto LAB3;
 
-LAB7:    xsi_set_current_line(95, ng0);
-    t1 = (t0 + 7263);
-    xsi_report(t1, 23U, 0);
-    xsi_set_current_line(96, ng0);
+LAB7:    xsi_set_current_line(96, ng0);
     t1 = (t0 + 4376);
-    t2 = (t1 + 56U);
-    t5 = *((char **)t2);
-    t6 = (t5 + 56U);
+    t6 = (t1 + 56U);
     t7 = *((char **)t6);
-    *((unsigned char *)t7) = (unsigned char)3;
+    t8 = (t7 + 56U);
+    t9 = *((char **)t8);
+    *((unsigned char *)t9) = (unsigned char)3;
     xsi_driver_first_trans_fast_port(t1);
     xsi_set_current_line(97, ng0);
     t1 = (t0 + 4312);

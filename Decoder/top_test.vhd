@@ -100,7 +100,7 @@ BEGIN
 		end if;
 		
 		if (sending_bit_out = '1') then
-			write(bit_line, std_logic'image(bit_out));
+			write(bit_line, bit_out);
 			writeline(bitfile, bit_line);
 		end if;
 		

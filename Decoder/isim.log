@@ -1,0 +1,35 @@
+ISim log file
+Running: /home/school/ise_projs/final-year-project/Decoder/top_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/school/ise_projs/final-year-project/Decoder/top_test_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 4433600 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 4433395 ns: Note: Finished! (/top_test/).
+at 4433405 ns: Note: Finished! (/top_test/).
+at 4433415 ns: Note: Finished! (/top_test/).
+at 4433425 ns: Note: Finished! (/top_test/).
+at 4433435 ns: Note: Finished! (/top_test/).
+at 4433445 ns: Note: Finished! (/top_test/).
+at 4433455 ns: Note: Finished! (/top_test/).
+at 4433465 ns: Note: Finished! (/top_test/).
+at 4433475 ns: Note: Finished! (/top_test/).
+at 4433485 ns: Note: Finished! (/top_test/).
+at 4433495 ns: Note: Finished! (/top_test/).
+at 4433505 ns: Note: Finished! (/top_test/).
+at 4433515 ns: Note: Finished! (/top_test/).
+at 4433525 ns: Note: Finished! (/top_test/).
+at 4433535 ns: Note: Finished! (/top_test/).
+at 4433545 ns: Note: Finished! (/top_test/).
+at 4433555 ns: Note: Finished! (/top_test/).
+at 4433565 ns: Note: Finished! (/top_test/).
+at 4433575 ns: Note: Finished! (/top_test/).
+at 4433585 ns: Note: Finished! (/top_test/).
+at 4433595 ns: Note: Finished! (/top_test/).
+# exit 0
