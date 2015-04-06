@@ -92,7 +92,7 @@ begin
 		elsif rising_edge(clk) then
 			finished <= '0';
 			if counter >= NUMBER_OF_BITS then
-			   report "Finished with addresses";
+			   --report "Finished with addresses";
 				finished <= '1';
 				is_finished <= '1';
 			else

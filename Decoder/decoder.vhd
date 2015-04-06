@@ -108,22 +108,22 @@ begin
 			enable_read <= '0';
 			to_insert <= 0;
 			index <= 1;
-			report "Is finihsed : " & std_logic'image(data_finished);
-			report "Bit in " & std_logic'image(bit_in);
+			--report "Is finihsed : " & std_logic'image(data_finished);
+			--report "Bit in " & std_logic'image(bit_in);
 			-- set dispatch state
 			
 			case current_state is
 				when START =>
-				   report "Starting circuit";
+				   --report "Starting circuit";
 					current_state <= START_DECODING;
 				when AWAIT_ADDR_CALC =>
-				   report "State : AWAIT_ADDR_CALC";
+				   --report "State : AWAIT_ADDR_CALC";
 					current_state <= AWAIT_DATA_RETR;
 				when AWAIT_DATA_RETR =>
-				   report "State :  AWAIT_DATA_RETR";
+				   --report "State :  AWAIT_DATA_RETR";
 					current_state <= dispatch_state;
 				when START_DECODING =>
-				   report "State : START_DECODING";
+				   --report "State : START_DECODING";
 					if data_finished = '0' then
 						if bit_in = '1' then
 							dispatch_state <= START_WITH_ONE;
@@ -133,24 +133,26 @@ begin
 						need_more_data_out <= '1';
 						current_state <= AWAIT_ADDR_CALC;
 					else
-					   report "Breakpoint";
+					   --report "Breakpoint";
 						finished_out <= '1';
 						current_state <= DONE;
 					end if;
 				when START_WITH_ZERO =>
-				   report "START_WTH_ZERO";
+				   --report "START_WTH_ZERO";
 					if bit_in = '0' then
 						--report "Going to extract index";
 						dispatch_state <= EXTRACT_VQ_INDEX;
 						vq_acc <= 0;
 						counter <= 8;
 					else
+					   bit_out <= '0';
+						sending_bit_out <= '0';
 						dispatch_state <= CHECK_NEXT_BIT;
 					end if;
 					need_more_data_out <= '1';
 					current_state <= AWAIT_ADDR_CALC;
 				when INSERT_INTO_LIST =>
-				   report "INSERT_INTO_LIST";
+				   --report "INSERT_INTO_LIST";
 					to_insert <= vq_acc;
 					enable_insert <= '1';
 					--dispatch_state <= START_DECODING;
@@ -158,7 +160,7 @@ begin
 					--current_state <= AWAIT_ADDR_CALC;
 					current_state <= START_DECODING;
 				when EXTRACT_VQ_INDEX =>
-				   report "EXTRACT_VQ_INDEX";
+				   --report "EXTRACT_VQ_INDEX";
 					if counter = 0 then
 						current_state <= INSERT_INTO_LIST;
 						sending_vq_index_out <= '1';
@@ -178,7 +180,9 @@ begin
 						dispatch_state <= EXTRACT_VQ_INDEX;
 					end if;
 				when START_WITH_ONE =>
-				   report "START_WITH_ONE";
+				   --report "START_WITH_ONE";
+					bit_out <= '1';
+					sending_bit_out <= '1';
 					if bit_in = '0' then
 					   need_more_data_out <= '1';
 						current_state <= AWAIT_ADDR_CALC;
@@ -192,7 +196,7 @@ begin
 						vq_index_out <= std_logic_vector(to_unsigned(at_index_one, MAX_NUMBER_OF_BITS_FOR_VQ));
 					end if;
 				when CHECK_NEXT_BIT =>
-				   report "CHECK_NEXT_BIT";
+				   --report "CHECK_NEXT_BIT";
 					if bit_in = '1' then
 						sending_vq_index_out <= '1';
 						vq_index_out <= std_logic_vector(to_unsigned(at_index_one, MAX_NUMBER_OF_BITS_FOR_VQ));
@@ -204,7 +208,7 @@ begin
 					need_more_data_out <= '1';
 					current_state <= AWAIT_ADDR_CALC;
 				when COMPUTE_LIST_INDEX =>
-				   report "COMPUTE_LIST_INDEX";
+				   --report "COMPUTE_LIST_INDEX";
 					if bit_in = '0' then
 						counter <= counter + 1;
 						dispatch_state <= COMPUTE_LIST_INDEX;
@@ -216,14 +220,14 @@ begin
 					need_more_data_out <= '1';
 					current_state <= AWAIT_ADDR_CALC;
 				when EXTRACT_LIST_INDEX =>
-				   report "EXTRACT_LIST_INDEX";
-					report "Counter is " & integer'image(counter);
+				   --report "EXTRACT_LIST_INDEX";
+					--report "Counter is " & integer'image(counter);
 					if counter = 0 then
-					   report "Dispatch to list processing";
+					   --report "Dispatch to list processing";
 						current_state <= AWAIT_LIST_PROCESSING;
-						report "Enable reading from list";
+						--report "Enable reading from list";
 						enable_read <= '1';
-						report "sending " & integer'image(index_acc);
+						--report "sending " & integer'image(index_acc);
 						index <= index_acc;
 					else
 					   need_more_data_out <= '1';
@@ -237,10 +241,10 @@ begin
 						dispatch_state <= EXTRACT_LIST_INDEX;
 					end if;
 				when AWAIT_LIST_PROCESSING =>
-				   report "AWAIT_LIST_PROCESSING";
+				   --report "AWAIT_LIST_PROCESSING";
 					current_state <= READ_LIST_RESPONSE;
 				when READ_LIST_RESPONSE =>
-				   report "READ_LIST_RESPONSE";
+				   --report "READ_LIST_RESPONSE";
 					sending_vq_index_out <= '1';
 					vq_index_out <= std_logic_vector(to_unsigned(value_at_index, MAX_NUMBER_OF_BITS_FOR_VQ));
 					--need_more_data_out <= '1';
@@ -248,7 +252,7 @@ begin
 					current_state <= START_DECODING;
 					--dispatch_state <= START_DECODING;
 				when DONE =>
-				   report "DONE";
+				   --report "DONE";
 					finished_out <= '1';
 					current_state <= DONE;
 			end case;

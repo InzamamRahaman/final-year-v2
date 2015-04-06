@@ -33,3 +33,4 @@ xst -intstyle ise -ifn "/home/school/ise_projs/final-year-project/Decoder/top.xs
 xst -intstyle ise -ifn "/home/school/ise_projs/final-year-project/Decoder/top.xst" -ofn "/home/school/ise_projs/final-year-project/Decoder/top.syr" 
 xst -intstyle ise -ifn "/home/school/ise_projs/final-year-project/Decoder/top.xst" -ofn "/home/school/ise_projs/final-year-project/Decoder/top.syr" 
 xst -intstyle ise -ifn "/home/school/ise_projs/final-year-project/Decoder/top.xst" -ofn "/home/school/ise_projs/final-year-project/Decoder/top.syr" 
+xst -intstyle ise -ifn "/home/school/ise_projs/final-year-project/Decoder/top.xst" -ofn "/home/school/ise_projs/final-year-project/Decoder/top.syr" 
