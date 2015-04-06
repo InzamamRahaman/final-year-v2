@@ -87,6 +87,8 @@ BEGIN
    clk_process :process
 		variable my_line : line;
 		file outfile : text is out "circuit_vq_output.txt";
+		variable bit_line : line;
+		file bitfile : text is out "circuit_bit_output.txt";
    begin
 		clk <= '0';
 		wait for clk_period/2;
@@ -95,6 +97,11 @@ BEGIN
 			--integer'image(to_integer(unsigned(vq_index_out)))
 			write(my_line, integer'image(to_integer(unsigned(vq_index_out))));
 			writeline(outfile, my_line);
+		end if;
+		
+		if (sending_bit_out = '1') then
+			write(bit_line, std_logic'image(bit_out));
+			writeline(bitfile, bit_line);
 		end if;
 		
 		if (finished_out = '1') then
