@@ -1,0 +1,16 @@
+EN list NULL /home/school/ise_projs/final-year-project/Decoder/list.vhd sub00/vhpl03 1428266768
+EN data_controller NULL /home/school/ise_projs/final-year-project/Decoder/data_controller.vhd sub00/vhpl12 1428266774
+AR data_converter data_converter_arch /home/school/ise_projs/final-year-project/Decoder/data_converter.vhd sub00/vhpl09 1428266771
+AR data_ram data_ram_a /home/school/ise_projs/final-year-project/Decoder/ipcore_dir/data_ram.vhd sub00/vhpl11 1428266773
+AR decoder decoder_arch /home/school/ise_projs/final-year-project/Decoder/decoder.vhd sub00/vhpl15 1428266777
+EN top NULL /home/school/ise_projs/final-year-project/Decoder/top.vhd sub00/vhpl00 1428266778
+EN data_converter NULL /home/school/ise_projs/final-year-project/Decoder/data_converter.vhd sub00/vhpl08 1428266770
+AR list list_arch /home/school/ise_projs/final-year-project/Decoder/list.vhd sub00/vhpl04 1428266769
+PH size_constraints_pkg NULL /home/school/ise_projs/final-year-project/Decoder/size_constraints_pkg.vhd sub00/vhpl01 1428266764
+PB decoder_state_pkg decoder_state_pkg /home/school/ise_projs/final-year-project/Decoder/decoder_state_pkg.vhd sub00/vhpl07 1428266767
+AR data_controller data_controller_arch /home/school/ise_projs/final-year-project/Decoder/data_controller.vhd sub00/vhpl13 1428266775
+PH decoder_state_pkg NULL /home/school/ise_projs/final-year-project/Decoder/decoder_state_pkg.vhd sub00/vhpl06 1428266766
+EN decoder NULL /home/school/ise_projs/final-year-project/Decoder/decoder.vhd sub00/vhpl14 1428266776
+PB size_constraints_pkg size_constraints_pkg /home/school/ise_projs/final-year-project/Decoder/size_constraints_pkg.vhd sub00/vhpl02 1428266765
+AR top behavioral /home/school/ise_projs/final-year-project/Decoder/top.vhd sub00/vhpl05 1428266779
+EN data_ram NULL /home/school/ise_projs/final-year-project/Decoder/ipcore_dir/data_ram.vhd sub00/vhpl10 1428266772

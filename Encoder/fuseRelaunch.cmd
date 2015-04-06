@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/school/ise_projs/final-year-project/Encoder/main_test_isim_beh.exe" -prj "/home/school/ise_projs/final-year-project/Encoder/main_test_beh.prj" "work.main_test" 

@@ -1,0 +1,8 @@
+vhdl work "ipcore_dir/data_ram.vhd"
+vhdl work "size_constraints_pkg.vhd"
+vhdl work "list.vhd"
+vhdl work "decoder_state_pkg.vhd"
+vhdl work "data_converter.vhd"
+vhdl work "decoder.vhd"
+vhdl work "data_controller.vhd"
+vhdl work "top.vhd"

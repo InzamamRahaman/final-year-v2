@@ -1,0 +1,31 @@
+'''
+Created on Mar 21, 2015
+
+@author: school
+'''
+
+import sys 
+from OrganizingList import OrganizingList
+from FifoQueue import FifoQueue
+
+
+
+if __name__ == '__main__':
+    
+    arguments = sys.argv
+    image_file_name = arguments[1]
+    secret_file_name = arguments[2]
+    
+    if len(arguments) > 3:
+        output_file_name = arguments[3]
+    else:
+        output_file_name = "output.txt"
+    
+    image_file = open(image_file_name, 'r')
+    secret_file = open(secret_file_name, 'r')
+    output_file = open(output_file_name, 'w')
+    
+    
+    
+    
+    

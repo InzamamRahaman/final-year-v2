@@ -1,0 +1,19 @@
+'''
+Created on Mar 27, 2015
+
+@author: school
+'''
+
+import enum
+
+class MyClass(object):
+    '''
+    classdocs
+    '''
+
+
+    def __init__(self, params):
+        '''
+        Constructor
+        '''
+        

@@ -1,0 +1,8 @@
+work	"data_controller.vhd"
+work	"data_converter.vhd"
+work	"decoder.vhd"
+work	"decoder_state_pkg.vhd"
+work	"ipcore_dir/data_ram.vhd"
+work	"list.vhd"
+work	"size_constraints_pkg.vhd"
+work	"top.vhd"

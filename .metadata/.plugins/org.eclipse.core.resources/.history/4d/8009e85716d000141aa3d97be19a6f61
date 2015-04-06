@@ -1,0 +1,43 @@
+'''
+Created on Mar 21, 2015
+
+@author: school
+'''
+
+import sys 
+from OrganizingList import OrganizingList
+from FifoQueue import FifoQueue
+
+
+def read_and_clean_files(file_obj):
+    contents = file_obj.read().split()
+    return filter(lambda x : len(x) > 0, contents)
+
+if __name__ == '__main__':
+    
+    arguments = sys.argv
+    image_file_name = arguments[1]
+    secret_file_name = arguments[2]
+    
+    if len(arguments) > 3:
+        output_file_name = arguments[3]
+    else:
+        output_file_name = "output.txt"
+    
+    image_file = open(image_file_name, 'r')
+    secret_file = open(secret_file_name, 'r')
+    output_file = open(output_file_name, 'w')
+    
+    image_data = read_and_clean_files(image_file)
+    secret_file = read_and_clean_files(secret_file)
+    image_file.close()
+    secret_file.close()
+    
+    
+    
+    
+    
+    
+    
+    
+    

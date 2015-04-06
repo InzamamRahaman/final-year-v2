@@ -1,0 +1,3 @@
+vhdl work "globals.vhd"
+vhdl work "list.vhd"
+vhdl work "list_test.vhd"

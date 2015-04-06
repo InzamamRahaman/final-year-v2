@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/globals.vhd</arg>&quot; line <arg fmt="%d" index="2">49</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">img</arg>&gt;. Only text files are supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/globals.vhd</arg>&quot; line <arg fmt="%d" index="2">50</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">in_secret</arg>&gt;. Only text files are supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/globals.vhd</arg>&quot; line <arg fmt="%d" index="2">51</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">out_secret</arg>&gt;. Only text files are supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/globals.vhd</arg>&quot; line <arg fmt="%d" index="2">49</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">img</arg>&gt;. Only text files are supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/globals.vhd</arg>&quot; line <arg fmt="%d" index="2">50</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">in_secret</arg>&gt;. Only text files are supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/globals.vhd</arg>&quot; line <arg fmt="%d" index="2">51</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">out_secret</arg>&gt;. Only text files are supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/globals.vhd</arg>&quot; line <arg fmt="%d" index="2">49</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">img</arg>&gt;. Only text files are supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/globals.vhd</arg>&quot; line <arg fmt="%d" index="2">50</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">in_secret</arg>&gt;. Only text files are supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/globals.vhd</arg>&quot; line <arg fmt="%d" index="2">51</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">out_secret</arg>&gt;. Only text files are supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/globals.vhd</arg>&quot; line <arg fmt="%d" index="2">49</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">img</arg>&gt;. Only text files are supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/globals.vhd</arg>&quot; line <arg fmt="%d" index="2">50</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">in_secret</arg>&gt;. Only text files are supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/globals.vhd</arg>&quot; line <arg fmt="%d" index="2">51</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">out_secret</arg>&gt;. Only text files are supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/main.vhd</arg>&quot; line <arg fmt="%d" index="2">49</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">img</arg>&gt;. Only text files are supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/main.vhd</arg>&quot; line <arg fmt="%d" index="2">50</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">in_secret</arg>&gt;. Only text files are supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1929" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Encoder/main.vhd</arg>&quot; line <arg fmt="%d" index="2">51</arg>: Skipping file declaration &lt;<arg fmt="%s" index="3">out_secret</arg>&gt;. Only text files are supported.
+</msg>
+
+</messages>

@@ -1,0 +1,16 @@
+'''
+Created on Mar 27, 2015
+
+@author: school
+'''
+
+import sys 
+args = sys.argv
+input_file = args[1]
+image_file = args[2]
+secret_file = args[3]
+
+
+
+if __name__ == '__main__':
+    pass

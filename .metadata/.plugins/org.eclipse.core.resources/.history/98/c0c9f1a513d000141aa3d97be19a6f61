@@ -1,0 +1,17 @@
+'''
+Created on Mar 21, 2015
+
+@author: school
+'''
+
+class OrganizingList(object):
+    '''
+    classdocs
+    '''
+
+
+    def __init__(self, params):
+        '''
+        Constructor
+        '''
+        

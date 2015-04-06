@@ -1,0 +1,4 @@
+vhdl work "size_data_pkg.vhd"
+vhdl work "list.vhd"
+vhdl work "encoder_state_pkg.vhd"
+vhdl work "encoder.vhd"

@@ -1,0 +1,13 @@
+'''
+Created on Mar 27, 2015
+
+@author: school
+'''
+
+import enum
+
+class StreamPop(enum.Enum):
+    scenario1 = 1
+    scenario2 = 2
+    scenario3 = 3
+    

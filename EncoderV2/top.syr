@@ -1,0 +1,566 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> 
+Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/school/ise_projs/final-year-project/EncoderV2/size_data_pkg.vhd" in Library work.
+Package <size_data_pkg> compiled.
+Package body <size_data_pkg> compiled.
+Compiling vhdl file "/home/school/ise_projs/final-year-project/EncoderV2/encoder_state_pkg.vhd" in Library work.
+Package <encoder_state_pkg> compiled.
+Package body <encoder_state_pkg> compiled.
+Compiling vhdl file "/home/school/ise_projs/final-year-project/EncoderV2/conversions_pkg.vhd" in Library work.
+Architecture conversions_pkg of Entity conversions_pkg is up to date.
+Compiling vhdl file "/home/school/ise_projs/final-year-project/EncoderV2/list.vhd" in Library work.
+Entity <list> compiled.
+Entity <list> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/school/ise_projs/final-year-project/EncoderV2/list_index_size_calc.vhd" in Library work.
+Entity <list_index_size_calc> compiled.
+Entity <list_index_size_calc> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/school/ise_projs/final-year-project/EncoderV2/address_calculator.vhd" in Library work.
+Architecture behavioral of Entity address_calculator is up to date.
+Compiling vhdl file "/home/school/ise_projs/final-year-project/EncoderV2/ipcore_dir/IMAGE_RAM.vhd" in Library work.
+Architecture image_ram_a of Entity image_ram is up to date.
+Compiling vhdl file "/home/school/ise_projs/final-year-project/EncoderV2/ipcore_dir/SECRET_RAM.vhd" in Library work.
+Architecture secret_ram_a of Entity secret_ram is up to date.
+Compiling vhdl file "/home/school/ise_projs/final-year-project/EncoderV2/converter.vhd" in Library work.
+Architecture behavioral of Entity converter is up to date.
+Compiling vhdl file "/home/school/ise_projs/final-year-project/EncoderV2/encoder.vhd" in Library work.
+Entity <encoder> compiled.
+Entity <encoder> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/school/ise_projs/final-year-project/EncoderV2/top.vhd" in Library work.
+Entity <top> compiled.
+Entity <top> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <address_calculator> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <converter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <encoder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <list> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <list_index_size_calc> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "/home/school/ise_projs/final-year-project/EncoderV2/top.vhd" line 134: Instantiating black box module <IMAGE_RAM>.
+WARNING:Xst:2211 - "/home/school/ise_projs/final-year-project/EncoderV2/top.vhd" line 144: Instantiating black box module <SECRET_RAM>.
+INFO:Xst:2679 - Register <something> in unit <top> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing Entity <address_calculator> in library <work> (Architecture <behavioral>).
+Entity <address_calculator> analyzed. Unit <address_calculator> generated.
+
+Analyzing Entity <converter> in library <work> (Architecture <behavioral>).
+Entity <converter> analyzed. Unit <converter> generated.
+
+Analyzing Entity <encoder> in library <work> (Architecture <behavioral>).
+INFO:Xst:1749 - "/home/school/ise_projs/final-year-project/EncoderV2/encoder.vhd" line 181: report: CASE_3
+Entity <encoder> analyzed. Unit <encoder> generated.
+
+Analyzing Entity <list> in library <work> (Architecture <Behavioral>).
+Entity <list> analyzed. Unit <list> generated.
+
+Analyzing Entity <list_index_size_calc> in library <work> (Architecture <Behavioral>).
+Entity <list_index_size_calc> analyzed. Unit <list_index_size_calc> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <address_calculator>.
+    Related source file is "/home/school/ise_projs/final-year-project/EncoderV2/address_calculator.vhd".
+    Found 15-bit up counter for signal <image_address>.
+    Found 17-bit up counter for signal <secret_address>.
+    Summary:
+	inferred   2 Counter(s).
+Unit <address_calculator> synthesized.
+
+
+Synthesizing Unit <converter>.
+    Related source file is "/home/school/ise_projs/final-year-project/EncoderV2/converter.vhd".
+Unit <converter> synthesized.
+
+
+Synthesizing Unit <list>.
+    Related source file is "/home/school/ise_projs/final-year-project/EncoderV2/list.vhd".
+    Found 3-bit register for signal <index>.
+    Found 36-bit register for signal <elements>.
+    Found 3-bit comparator lessequal for signal <elements_2$cmp_le0000> created at line 66.
+    Found 3-bit comparator less for signal <elements_2$cmp_lt0000> created at line 66.
+    Found 3-bit comparator less for signal <elements_3$cmp_lt0000> created at line 66.
+    Found 3-bit comparator less for signal <elements_4$cmp_lt0000> created at line 66.
+    Found 9-bit comparator equal for signal <response$cmp_eq0000> created at line 58.
+    Found 9-bit comparator equal for signal <response$cmp_eq0001> created at line 58.
+    Found 9-bit comparator equal for signal <response$cmp_eq0002> created at line 58.
+    Found 9-bit comparator equal for signal <response$cmp_eq0003> created at line 58.
+    Summary:
+	inferred  39 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+Unit <list> synthesized.
+
+
+Synthesizing Unit <list_index_size_calc>.
+    Related source file is "/home/school/ise_projs/final-year-project/EncoderV2/list_index_size_calc.vhd".
+    Found 3-bit comparator greater for signal <num_bits$cmp_gt0000> created at line 44.
+    Summary:
+	inferred   1 Comparator(s).
+Unit <list_index_size_calc> synthesized.
+
+
+Synthesizing Unit <encoder>.
+    Related source file is "/home/school/ise_projs/final-year-project/EncoderV2/encoder.vhd".
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 15                                             |
+    | Transitions        | 20                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 16                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | reset_state                                    |
+    | Power Up State     | reading_data                                   |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <completed>.
+    Found 4-bit register for signal <entry_len>.
+    Found 10-bit register for signal <entry>.
+    Found 1-bit register for signal <send_more>.
+    Found 1-bit register for signal <send_more_secret>.
+    Found 1-bit register for signal <enable_list>.
+    Found 15-bit register for signal <vq_count>.
+    Found 15-bit adder for signal <vq_count$addsub0000>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <encoder> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "/home/school/ise_projs/final-year-project/EncoderV2/top.vhd".
+WARNING:Xst:646 - Signal <something> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <top> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 15-bit adder                                          : 1
+# Counters                                             : 2
+ 15-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+# Registers                                            : 21
+ 1-bit register                                        : 14
+ 15-bit register                                       : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 1
+ 9-bit register                                        : 4
+# Comparators                                          : 9
+ 3-bit comparator greater                              : 1
+ 3-bit comparator less                                 : 3
+ 3-bit comparator lessequal                            : 1
+ 9-bit comparator equal                                : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <encoder_unit/current_state/FSM> on signal <current_state[1:15]> with one-hot encoding.
+--------------------------------------------
+ State                   | Encoding
+--------------------------------------------
+ reading_data            | 000000000000001
+ awaiting_list_transform | 000000000001000
+ reset_state             | 000000000000010
+ another_done            | 000000000100000
+ inform_user             | 000000000010000
+ done                    | 100000000000000
+ index_contained_false   | 000000000000100
+ index_contained_true    | 000000001000000
+ request_more_secret     | 010000000000000
+ all_secret_zero_true    | 000000010000000
+ all_secret_zero_false   | 000000100000000
+ case_2                  | 000001000000000
+ case_3                  | 000010000000000
+ case_4                  | 000100000000000
+ case_5                  | 001000000000000
+--------------------------------------------
+Reading core <ipcore_dir/IMAGE_RAM.ngc>.
+Reading core <ipcore_dir/SECRET_RAM.ngc>.
+Loading core <IMAGE_RAM> for timing and area information for instance <image_unit>.
+Loading core <SECRET_RAM> for timing and area information for instance <secret_unit>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 1
+ 15-bit adder                                          : 1
+# Counters                                             : 2
+ 15-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+# Registers                                            : 72
+ Flip-Flops                                            : 72
+# Comparators                                          : 9
+ 3-bit comparator greater                              : 1
+ 3-bit comparator less                                 : 3
+ 3-bit comparator lessequal                            : 1
+ 9-bit comparator equal                                : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <current_state_FSM_FFd12> in Unit <encoder> is equivalent to the following FF/Latch, which will be removed : <enable_list> 
+
+Optimizing unit <top> ...
+
+Optimizing unit <list> ...
+
+Optimizing unit <encoder> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 118
+ Flip-Flops                                            : 118
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 17
+
+Cell Usage :
+# BELS                             : 261
+#      GND                         : 3
+#      INV                         : 12
+#      LUT1                        : 42
+#      LUT2                        : 12
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 22
+#      LUT4                        : 53
+#      MUXCY                       : 64
+#      MUXF5                       : 3
+#      VCC                         : 1
+#      XORCY                       : 47
+# FlipFlops/Latches                : 125
+#      FDC                         : 29
+#      FDCE                        : 48
+#      FDE                         : 11
+#      FDP                         : 1
+#      FDPE                        : 36
+# RAMS                             : 15
+#      RAMB16_S1_S1                : 14
+#      RAMB16_S9_S9                : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 1
+#      OBUF                        : 15
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       97  out of   4656     2%  
+ Number of Slice Flip Flops:            125  out of   9312     1%  
+ Number of 4 input LUTs:                143  out of   9312     1%  
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    232     7%  
+ Number of BRAMs:                        15  out of     20    75%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                                           | Load  |
+-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------+
+clk                                | BUFGP                                                                                                                           | 140   |
+image_unit/N1                      | NONE(image_unit/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp1x1.ram) | 9     |
+secret_unit/N1                     | NONE(secret_unit/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/s3_init.ram/dpram.dp1x1.ram)| 6     |
+-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 114   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 9.058ns (Maximum Frequency: 110.405MHz)
+   Minimum input arrival time before clock: 3.900ns
+   Maximum output required time after clock: 4.040ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.058ns (frequency: 110.405MHz)
+  Total number of paths / destination ports: 8633 / 431
+-------------------------------------------------------------------------
+Delay:               9.058ns (Levels of Logic = 10)
+  Source:            image_unit/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s3_init.ram/dpram.dp9x9.ram (RAM)
+  Destination:       encoder_unit/list_unit/elements_2_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: image_unit/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s3_init.ram/dpram.dp9x9.ram to encoder_unit/list_unit/elements_2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S9_S9:CLKA->DOA1    1   2.436   0.426  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s3_init.ram/dpram.dp9x9.ram (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.ram_douta<1>)
+     LUT4:I1->O            6   0.612   0.599  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux21 (douta<1>)
+     end scope: 'image_unit'
+     LUT4:I2->O            1   0.612   0.000  encoder_unit/list_unit/Mcompar_response_cmp_eq0001_lut<0> (encoder_unit/list_unit/Mcompar_response_cmp_eq0001_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  encoder_unit/list_unit/Mcompar_response_cmp_eq0001_cy<0> (encoder_unit/list_unit/Mcompar_response_cmp_eq0001_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  encoder_unit/list_unit/Mcompar_response_cmp_eq0001_cy<1> (encoder_unit/list_unit/Mcompar_response_cmp_eq0001_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  encoder_unit/list_unit/Mcompar_response_cmp_eq0001_cy<2> (encoder_unit/list_unit/Mcompar_response_cmp_eq0001_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  encoder_unit/list_unit/Mcompar_response_cmp_eq0001_cy<3> (encoder_unit/list_unit/Mcompar_response_cmp_eq0001_cy<3>)
+     MUXCY:CI->O           4   0.399   0.651  encoder_unit/list_unit/Mcompar_response_cmp_eq0001_cy<4> (encoder_unit/list_unit/Mcompar_response_cmp_eq0001_cy<4>)
+     LUT2_D:I0->O          1   0.612   0.360  encoder_unit/list_unit/elements_3_not0001_SW0 (N16)
+     LUT4:I3->O            9   0.612   0.697  encoder_unit/list_unit/elements_2_not0001 (encoder_unit/list_unit/elements_2_not0001)
+     FDPE:CE                   0.483          encoder_unit/list_unit/elements_2_0
+    ----------------------------------------
+    Total                      9.058ns (6.325ns logic, 2.733ns route)
+                                       (69.8% logic, 30.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.900ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       encoder_unit/list_unit/index_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to encoder_unit/list_unit/index_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           116   1.106   1.247  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            3   0.612   0.451  encoder_unit/list_unit/index_and00001 (encoder_unit/list_unit/index_and0000)
+     FDE:CE                    0.483          encoder_unit/list_unit/index_0
+    ----------------------------------------
+    Total                      3.900ns (2.201ns logic, 1.699ns route)
+                                       (56.4% logic, 43.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            encoder_unit/completed (FF)
+  Destination:       completed (PAD)
+  Source Clock:      clk rising
+
+  Data Path: encoder_unit/completed to completed
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.514   0.357  encoder_unit/completed (encoder_unit/completed)
+     OBUF:I->O                 3.169          completed_OBUF (completed)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 7.94 secs
+ 
+--> 
+
+
+Total memory usage is 528348 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

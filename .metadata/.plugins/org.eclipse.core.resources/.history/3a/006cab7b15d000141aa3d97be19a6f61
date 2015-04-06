@@ -1,0 +1,19 @@
+'''
+Created on Mar 21, 2015
+
+@author: school
+'''
+
+class MyClass(object):
+    
+    def __init__(self):
+        self.elements = []
+       
+    def insert(self, elem):
+        self.elements.append(elem)
+    
+        
+    def get(self):
+        temp = self.elements[0]
+        self.elements = self.elements[1 : ]
+        return temp

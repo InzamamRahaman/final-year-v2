@@ -1,0 +1,8 @@
+[Inputs]
+clk
+rst
+[Outputs]
+finished
+=stream_segment[1:10]=
+=stream_segment_len[3:0]=
+[BiDir]

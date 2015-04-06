@@ -1,0 +1,3 @@
+vhdl isim_temp "globals.vhd"
+vhdl isim_temp "list.vhd"
+vhdl isim_temp "main.vhd"

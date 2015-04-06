@@ -1,0 +1,11 @@
+INSTUPsrc.decoder
+/home/school/ise_projs/final-year-project/python-decoder/src/decoder.py
+INFOS:&&3|1|2|0&&3|3|2|0&&3|4|2|0&&3|5|2|0&&3|6|2|0&&3|7|2|0&&2|8|2|0
+args=1
+input_file_name=3
+queue_of_output=7
+src.decoder=2
+image_file=4
+main=8
+secret_file=5
+my_list=6

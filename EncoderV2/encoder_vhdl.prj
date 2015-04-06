@@ -1,0 +1,4 @@
+vhdl work "/home/school/ise_projs/final-year-project/EncoderV2/size_data_pkg.vhd"
+vhdl work "/home/school/ise_projs/final-year-project/EncoderV2/list.vhd"
+vhdl work "/home/school/ise_projs/final-year-project/EncoderV2/encoder_state_pkg.vhd"
+vhdl work "/home/school/ise_projs/final-year-project/EncoderV2/encoder.vhd"

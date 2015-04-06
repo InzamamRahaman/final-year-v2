@@ -1,0 +1,23 @@
+'''
+Created on Mar 27, 2015
+
+@author: school
+'''
+
+import FileProcessor
+
+import sys 
+args = sys.argv
+input_file_name = args[1]
+image_file = open(args[2].strip(), 'r')
+secret_file_name = open(args[3].strip(), 'r')
+
+queue_of_output = FileProcessor.create_queue_of_data(input_file_name)
+
+
+
+def main():
+
+
+if __name__ == '__main__':
+    pass
