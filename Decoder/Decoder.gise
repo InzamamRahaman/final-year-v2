@@ -100,6 +100,7 @@
     <transform xil_pn:end_ts="1428299695" xil_pn:in_ck="3156604953128124919" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1169188159510208690" xil_pn:start_ts="1428299687">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <status xil_pn:value="OutputRemoved"/>
@@ -112,6 +113,7 @@
     <transform xil_pn:end_ts="1428299695" xil_pn:in_ck="7288470143600214356" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2342587064141018718" xil_pn:start_ts="1428299695">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
