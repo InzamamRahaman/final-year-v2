@@ -1,0 +1,74 @@
+digraph finite_state_machine  {
+	
+	rankdir=LR;
+	size="8, 5"
+
+	node [shape = circle, 
+	label="RESET_STATE"] reset_state;
+
+	node [shape = circle,
+	label="INFORM_USER"] inform_user;
+
+	node [shape = circle,
+	label="AWAIT_LIST_TRANSFORM"] await_list_transform;
+
+	node [shape=circle, 
+	label="READING_DATA"] reading_data;
+
+	node[shape = circle,
+	label="INDEX_CONTAINED_FALSE"] index_contained_false;
+
+	node[shape=cirle,
+	label="INDEX_CONTAINED_TRUE"]
+	index_contained_true;
+
+	node[shape=circle,
+	label="ALL_SECRET_ZERO_TRUE"]
+	all_secret_zero_true;
+
+	node[shape=circle,
+	label="ALL_SECRET_ZERO_FALSE"]
+	all_secret_zero_false;
+
+	node[shape=circle,
+	label="CASE_2"]
+	case_2;
+
+	node[shape=circle,
+	label="CASE_4"]
+	case_4;
+
+	node[shape=circle,
+	label="CASE_3"]
+	case_3;
+
+	node[shape=circle,
+	label="CASE_5"]
+	case_5;
+
+	node[shape=circle,
+	label="REQUEST_MORE_INPUT"]
+	request_more_input;
+
+	node[shape=doublecircle,
+	label="DONE"]
+	done;
+
+	node[shape=point ]; qi
+
+	qi -> reset_state;
+
+	reset_state -> index_contained_false [label = "*/1||0||0000000||0000||0"];
+
+	inform_user ->
+	await_list_transform [label="*/0||0||0000000||0000||0"];
+
+	awaiting_list_transform ->
+	reading_data [label="*/0||0||0000000||0000||0"];
+
+	reading_data -> done [label="*/0||0||0000000||0000||0"];
+
+	reading_data -> index_contained_false
+
+
+}

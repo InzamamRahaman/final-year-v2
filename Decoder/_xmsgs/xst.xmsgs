@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Decoder/data_controller.vhd</arg>&quot; line <arg fmt="%d" index="2">76</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">data_ram</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">/home/school/ise_projs/final-year-project/Decoder/data_controller.vhd</arg>&quot; line <arg fmt="%d" index="2">76</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">data_ram</arg>&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">data_buffer</arg>&gt; in unit &lt;<arg fmt="%s" index="2">decoder</arg>&gt; has a constant value of <arg fmt="%s" index="3">0000000000</arg> during circuit operation. The register is replaced by logic.
