@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: top.prj
@@ -45,7 +45,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "top"
 Output Format                      : NGC
-Target Device                      : xc3s500e-5-fg320
+Target Device                      : xc3s250e-5-vq100
 
 ---- Source Options
 Top Module Name                    : top
@@ -123,8 +123,7 @@ Architecture data_ram_a of Entity data_ram is up to date.
 Compiling vhdl file "/home/school/ise_projs/final-year-project/Decoder/data_controller.vhd" in Library work.
 Architecture data_controller_arch of Entity data_controller is up to date.
 Compiling vhdl file "/home/school/ise_projs/final-year-project/Decoder/decoder.vhd" in Library work.
-Entity <decoder> compiled.
-Entity <decoder> (Architecture <decoder_arch>) compiled.
+Architecture decoder_arch of Entity decoder is up to date.
 Compiling vhdl file "/home/school/ise_projs/final-year-project/Decoder/top.vhd" in Library work.
 Architecture behavioral of Entity top is up to date.
 
@@ -332,7 +331,7 @@ Optimizing unit <decoder> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 3.
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 5.
 
 Final Macro Processing ...
 
@@ -405,14 +404,14 @@ Cell Usage :
 Device utilization summary:
 ---------------------------
 
-Selected Device : 3s500efg320-5 
+Selected Device : 3s250evq100-5 
 
- Number of Slices:                      152  out of   4656     3%  
- Number of Slice Flip Flops:            157  out of   9312     1%  
- Number of 4 input LUTs:                285  out of   9312     3%  
+ Number of Slices:                      152  out of   2448     6%  
+ Number of Slice Flip Flops:            157  out of   4896     3%  
+ Number of 4 input LUTs:                285  out of   4896     5%  
  Number of IOs:                          14
- Number of bonded IOBs:                  14  out of    232     6%  
- Number of BRAMs:                         9  out of     20    45%  
+ Number of bonded IOBs:                  14  out of     66    21%  
+ Number of BRAMs:                         9  out of     12    75%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -532,8 +531,8 @@ Offset:              4.040ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 8.30 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 9.06 secs
  
 --> 
 
