@@ -1,1 +1,5 @@
 # final-year-v2
+
+While the Internet offers great flexibility in the transmission of multimedia, it also offers oppurtunities for unscrupulous individuals to violate copyright or to commit forgery. One method of overcoming this problem is to embed the copyright information into the data being transmitted such that the data may be recovered at the other end of the transmission. This task is under the purview of steganography.
+
+Since their inception, Field Programmable Gate Arrays (FPGAs) have provided hardware designers great flexibility in designing custom hardware to accommodate hard deadline requirements. In addition to custom hardware for hard deadline requirements, FPGAs also occupy a niche in high performance computing - by exploiting the specificity and inherent parallelism of FPGAs, we can sped up the performance of computationally intensive tasks. In this project, we shall design custom hardware in VHDL to run on a Xilinx Spartan 3E FPGA that embodies a reversible VQ index based steganographic technique designed by Kieu et al.
