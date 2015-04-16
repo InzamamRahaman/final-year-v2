@@ -1,0 +1,99 @@
+
+\centering
+
+\tikzstyle{switch}=[circle,
+                                                thick,
+                                                minimum size=0.9cm,
+                                                draw=orange!80,
+                                                fill=orange!25]
+
+% The control input vector is represented by a purple circle.
+\tikzstyle{input}=[rectangle,
+                                    thick,
+                                    minimum size=2.5cm,
+                                    draw=purple!80,
+                                    fill=purple!20]
+                                    
+\tikzstyle{background}=[rectangle,
+                                                fill=gray!10,
+                                                inner sep=0.2cm,
+                                                rounded corners=5mm]
+
+% The input, state transition, and measurement matrices
+% are represented by gray squares.
+% They have a smaller minimal size for aesthetic reasons.
+\tikzstyle{matrx}=[rectangle,
+                                    thick,
+                                    minimum size=1cm,
+                                    draw=gray!80,
+                                    fill=gray!20]
+
+
+\begin{tikzpicture}[>=latex,text height=1.5ex,text depth=0.25ex]
+    % "text height" and "text depth" are required to vertically
+    % align the labels with and without indices.
+  
+  % The various elements are conveniently placed using a matrix:
+  \matrix[row sep=0.5cm,column sep=0.5cm] {
+    % First line: Control input
+    %&
+        \node (lc1) [input]{logic cell}; &
+        \node (s1)  [switch]{switch}; &
+        \node (lc2) [input]{logic cell}; &
+        \node (s2)  [switch]{switch}; &
+        \node (lc3) [input]{logic cell}; &
+        
+        \\ 
+        \node (s3) [switch]{switch}; &
+        \node (s4) [switch]{switch}; &
+        \node (s5)   [switch]{switch}; &
+        \node (s6)   [switch]{switch}; &
+        \node (s7) [switch]{switch}; &
+        \\
+         
+        \node (lc4) [input]{logic cell}; &
+        \node (s8)  [switch]{switch}; &
+        \node (lc5) [input]{logic cell}; &
+        \node (s9)  [switch]{switch}; &
+        \node (lc6) [input]{logic cell}; &
+        \\
+    };
+    
+    % The diagram elements are now connected through arrows:
+    \path[=]
+        (lc1) edge[thick] (s1)
+        (s1)  edge[thick] (lc2)
+        (lc2) edge[thick] (s2)
+        (s2) edge[thick] (lc3)
+        (lc1) edge[thick] (s3)
+        (s1) edge[thick] (s4)
+        (lc2) edge[thick] (s5)
+        (s2) edge[thick] (s6)
+        (lc3) edge[thick] (s7)
+        (s3) edge[thick] (s4)
+        (s4) edge[thick] (s5)
+        (s5) edge[thick] (s6)
+        (s6) edge[thick] (s7)
+        (s3) edge[thick] (lc4)
+        (s4) edge[thick] (s8)
+        (s5) edge[thick] (lc5)
+        (s6) edge[thick] (s9)
+        (s7) edge[thick] (lc6)
+        (lc4) edge[thick] (s8)
+        (s8) edge[thick] (lc5)
+        (lc5) edge[thick] (s9)
+        (s9) edge[thick] (lc6)
+        ;
+        
+        
+ \begin{pgfonlayer}{background}
+        \node [background,
+                    fit=(lc1) (lc6)] {};
+    \end{pgfonlayer}
+\end{tikzpicture}
+
+
+
+%\caption{The general structure of an FPGA}
+%\label{fig:fpga_structure}
+

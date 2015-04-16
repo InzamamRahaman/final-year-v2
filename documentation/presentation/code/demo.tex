@@ -1,0 +1,274 @@
+\documentclass[10pt, compress]{beamer}
+
+\usetheme{m}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{minted}
+
+\usepackage[final]{pdfpages}
+\usepackage{amsfonts}
+\usepackage{tikz}
+
+\usepackage{graphicx} 
+
+% Define tikz styles here
+\usetikzlibrary{fit, matrix, backgrounds, shapes, arrows}
+
+
+\usepackage{listings}
+\usepackage{caption}
+
+
+\usemintedstyle{trac}
+
+\title{A Hardware Implementation of a VQ Index Based Steganography Technique}
+\subtitle{}
+\date{\today}
+\author{Inzamam Kaleem Rahaman}
+\institute{University of the West Indies, St Augustine}
+
+\begin{document}
+
+\maketitle
+
+\section{Background}
+
+\begin{frame}[fragile]
+  \frametitle{What is Steganography ?}
+
+  %\begin{figure}
+  %\centering
+  %\includegraphics[scale=0.35]{steganography_summary.png}
+  %%\label{fig:my_label}
+  %\end{figure}
+    
+ % The \emph{mtheme} is a Beamer theme with minimal visual noise inspired by the
+ % \href{https://github.com/hsrmbeamertheme/hsrmbeamertheme}{\textsc{hsrm} Beamer
+ % Theme} by Benjamin Weiss.
+
+  %Enable the theme by loading
+
+%  \begin{minted}[fontsize=\small]{latex}
+ %   \documentclass{beamer}
+  %  \usetheme{m}
+  %\end{minted}
+
+  %Note, that you have to have Mozilla's \emph{Fira Sans} font and XeTeX
+  %installed to enjoy this wonderful typography.
+  
+  \begin{figure}
+        \scalebox{.8}{\input{steganography.tex}}
+   \end{figure}
+  
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{What is an FPGA ?}
+  
+    \begin{figure}
+        \scalebox{.8}{\input{layout.tex}}
+        \caption{FPGA structure}
+    \end{figure}
+  %Sections group slides of the same topic
+
+  %\begin{minted}[fontsize=\small]{latex}
+   % \section{Elements}
+  %\end{minted}
+
+  %for which the \emph{mtheme} provides a nice progress indicator \ldots
+\end{frame}
+
+%\section{Elements}
+
+\begin{frame}[fragile]
+  \frametitle{What is an FPGA ?}
+  
+  \begin{figure}
+  \centering
+  \includegraphics[scale=0.35]{logic_cell_structure.png}
+  \caption{Internal structure of logic cell}
+  %\label{fig:my_label}
+  \end{figure}
+  
+\end{frame}
+
+
+\section{Why Implement on an FPGA ?}
+
+\begin{frame}{Why Implement on an FPGA ?}
+    
+    \begin{itemize}
+        \item No Von Neumann Bottleneck
+        \item No Context Switching
+        \item Is more energy efficient than a software implementation
+        \item Is a standalone component 
+    \end{itemize}
+
+\end{frame}
+
+\section{Results}
+
+\begin{frame}{Encoder State Machine}
+
+    \begin{figure}
+    \centering
+    \includegraphics[scale=0.25]{encoder_states.png}
+    \caption{State machine for encoder circuit}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{Encoder Circuit Overview}
+    
+    \begin{figure}
+    \centering
+    \includegraphics[scale=0.43]{top.pdf}
+    \end{figure}
+    
+
+\end{frame}
+
+\begin{frame}{Encoder Circuit Utilization}
+
+    \begin{table}[h]
+\begin{tabular}{llll}
+\toprule
+Logic Utilization          & Used & Available & Utilization \\ 
+\midrule
+Number of Slices           & 97   & 4656      & 2 \%        \\ 
+Number of Slice Flip Flops & 125  & 9312      & 1 \%        \\ 
+Number of 4 input LUTs     & 143  & 9312      & 1 \%        \\ 
+Number of bonded IOBs      & 17   & 232       & 7 \%        \\ 
+Number of BRAMs            & 15   & 20        & 75 \%       \\ 
+Number of GCLKs            & 1    & 24        & 4 \%        \\ 
+\bottomrule
+\end{tabular}
+\caption{Summary of resource utilization for encoder on XC3S500E}
+%\caption{Summary of resource utilization}
+%\label{table:util_summary}
+\end{table}
+
+\end{frame}
+
+
+\begin{frame}{Encoder Timing Statistics}
+
+\begin{table}[h]
+\begin{tabular}{|l|l|}
+\hline
+Minimum period                           & 9.058 ns      \\ \hline
+Maximum Frequency                        & 110.405 MHz   \\ \hline
+Minimum input arrival time before clock  & 3.900 ns      \\ \hline
+Maximum output required time after clock & 4.040 ns      \\ \hline
+Maximum combinational path delay         & No Path found \\ 
+\hline
+\end{tabular}
+\caption{Timing estimates for the encoder produced by the systhesis tool}
+\end{table}
+    
+
+\end{frame}
+
+\begin{frame}{Decoder State Machine}
+    
+    \begin{figure}
+    \centering
+    \includegraphics[scale=0.31]{decoder_states_v2.png}
+    \caption{State machine for decoder circuit}
+    \end{figure}
+    
+
+\end{frame}
+
+\begin{frame}{Decoder Circuit Overview}
+
+    \begin{figure}
+    \centering
+    \includegraphics[scale=0.4]{decoder_top_diagram.pdf}
+    \end{figure}    
+
+\end{frame}
+
+
+\begin{frame}{Decoder Circuit Utilization}
+
+    \begin{table}[h]
+\begin{tabular}{llll}
+\toprule
+Logic Utilization          & Used & Available & Utilization \\ 
+\midrule
+Number of Slices           & 152   & 4656      & 3 \%        \\ 
+Number of Slice Flip Flops & 157  & 9312      & 1 \%        \\ 
+Number of 4 input LUTs     & 285  & 9312      & 3 \%        \\ 
+Number of bonded IOBs      & 14   & 232       & 6 \%        \\ 
+Number of BRAMs            & 9   & 20        & 45 \%       \\ 
+Number of GCLKs            & 1    & 24        & 4 \%        \\ 
+\bottomrule
+\end{tabular}
+\caption{Summary of resource utilization for decoder on XC3S500E}
+%\label{table:util_summary_decoder_2}
+\end{table}
+
+\end{frame}
+
+\begin{frame}{Decoder Timing Statistics}
+
+\begin{table}[h]
+\begin{tabular}{|l|l|}
+\hline
+Minimum period                           & 8.067 ns      \\ \hline
+Maximum Frequency                        & 123.967 MHz   \\ \hline
+Minimum input arrival time before clock  & 4.371 ns      \\ \hline
+Maximum output required time after clock & 4.040 ns      \\ \hline
+Maximum combinational path delay         & No Path found \\ \hline
+\end{tabular}
+\caption{Timing estimates for the decoder produced by the systhesis tool}
+\label{table:time_estimate_decoder}
+\end{table}
+
+\end{frame}
+
+
+
+%\begin{frame}{Tables}
+%  \begin{table}
+%    \caption{Largest cities in the world (source: Wikipedia)}
+%    \begin{tabular}{lr}
+%      \toprule
+%      City & Population\\
+%      \midrule
+%      Mexico City & 20,116,842\\
+%      Shanghai & 19,210,000\\
+%      Peking & 15,796,450\\
+%      Istanbul & 14,160,467\\
+%      \bottomrule
+%    \end{tabular}
+%  \end{table}
+%\end{frame}
+%\begin{frame}{Blocks}
+
+ % \begin{block}{This is a block title}
+  %  This is soothing.
+  %\end{block}
+
+%\end{frame}
+%\begin{frame}{Math}
+%  \begin{equation*}
+%    e = \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^n
+%  \end{equation*}
+%\end{frame}
+%\begin{frame}{Quotes}
+%  \begin{quote}
+%    Veni, Vidi, Vici
+%  \end{quote}
+%\end{frame}
+
+%\plain{Dark background}{\vspace{-2em}\begin{center}\includegraphics[width=\textwidth]{images/valley.jpg}\end{center}}
+
+
+
+
+\plain{}{Questions?}
+
+\end{document}
